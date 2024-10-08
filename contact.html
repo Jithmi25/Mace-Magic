@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mace Magic</title>
+    <link rel="stylesheet" href="mace.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="Logo">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="mace.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+    <br><br><br>    
+    <div class="container">
+        <h1 class="contact">Contact Us</h1>
+        <div class="form-wrapper">
+            <div class="form-container">
+                <form method="post" action="https://script.google.com/macros/s/AKfycby43UnPhiOrEWtpx6ZBPDpdeRXYNApzFXNKbb1hko4HYV2POHNVU4isg-cILNbGsiLvuA/exec" id="contact-form">
+                    <label for="Name">Name:</label>
+                    <input type="text" id="Name" name="Name" required>
+    
+                    <label for="userTel">Telephone Number:</label>
+                    <input type="tel" id="userTel" name="userTel" required>
+    
+                    <label for="userWhatsApp">WhatsApp Number:</label>
+                    <input type="tel" id="userWhatsApp" name="userWhatsApp" required>
+    
+                    <label>What would you like to do?</label>
+                    <select id="buySellOption" name="buySellOption" required>
+                        <option value="buy">Buy</option>
+                        <option value="sell">Sell</option>
+                        <option value="both">Both</option>
+                    </select>
+                    <label>Spices you are interested in:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="spices1" value="Mace"> Mace</label>
+                        <label><input type="checkbox" name="spices2" value="Nutmeg"> Nutmeg</label>
+                        <label><input type="checkbox" name="spices3" value="Cardamom"> Cardamom</label>
+                        <label><input type="checkbox" name="spices4" value="Cloves"> Cloves</label>
+                        <label><input type="checkbox" name="spices5" value="Dried Ginger"> Dried Ginger</label>
+                        <label><input type="checkbox" name="spices6" value="Turmeric"> Turmeric</label>
+                        <label><input type="checkbox" name="spices7" value="Black Pepper"> Black Pepper</label>
+                        <label><input type="checkbox" name="spices8" value="Garcinia"> Garcinia</label>
+                        <label><input type="checkbox" name="spices9" value="Others"> Others</label>
+                    </div><br><br>
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+            <div class="image-container">
+                <img src="images/cu.jpg" alt="Contactus">
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="container2">
+        <div class="image-container2">
+            <img src="images/ec.jpg" alt="Contact Us">
+        </div>
+        <div class="form-container2">
+            <h2 class="e-c">Leave us a message and we will get back to you. </h2>
+            <form class="t-f" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="2d8eb0b8-6f96-4e56-a162-41a268930b02">
+
+                <label class="lt-f" for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder=" Enter your Name" required>
+
+                <label class="lt-f" for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder=" Enter your Email" required>
+
+                <label class="lt-f" for="massage">Your massage</label>
+                <textarea type="textarea" rows="4" cols="50" id="massage" name="massage" placeholder=" Enter your Massage" required></textarea>
+                <br><br>
+                <input class="st-f" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <script src="mace.js"></script>
+    <br><br><br>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+              <div class="map">Our Location</div>  
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7913.92252059086!2d80.57798309056099!3d7.3582394206029464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae34260d191190b%3A0x2426db57f4e9ed54!2sBothota!5e0!3m2!1sen!2slk!4v1724767634391!5m2!1sen!2slk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+             <div class="footer-column">
+              <div class="adress">Adress</div>
+              <i class="fa-solid fa-house"></i>
+                <p class="a-list">
+                  No.127,<br>
+                  Bothota,<br>
+                  Madewala.<br>
+                </p>
+             </div>
+             <div class="footer-column">
+               <div class="callus">Call Us</div>
+               <i class="fa-solid fa-phone"></i>
+                  <ul class="c-list">
+                     <li>+94987654321</li>
+                     <li>+94123456789</li>
+                  </ul>
+             </div>
+             <div class="foter-logo">
+                <p>Mace<br> Magic</p>
+             </div>
+      </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mace Magic</title>
+    <link rel="stylesheet" href="mace.css">
+    <style>
+ body {
+  color: #000000;
+  background-color: #f4f4f4;
+  padding: 0px;
+  margin: 0;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  color: #6b4caf;
+  margin-bottom: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th, td {
+  padding: 10px;
+  text-align:justify;
+  border-bottom: 1px solid #ddd;
+  width: fit-content;
+}
+th {
+  background-color: #6b4caf;
+  color: white;
+}
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+tbody tr {
+  transition: background-color 0.3s;
+}
+      </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="Logo">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="mace.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header><br><br>
+    <div id="progress">
+      <span id="progress-value">&#x1F815;</span>
+  </div>
+  <div class="container">
+    <h1>Current Prices</h1>
+    <table id="user-price-table">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price <br>(Rs)</th>
+          <th>Quantity<br>(Kg)</th>
+          <th>Quality</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be dynamically inserted here -->
+         
+      </tbody>
+    </table>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const priceTableBody = document.querySelector('#user-price-table tbody');
+  let storedData = JSON.parse(localStorage.getItem('priceData')) || [];
+
+  if (storedData.length === 0) {
+    priceTableBody.innerHTML = '<tr><td colspan="4">No price data available</td></tr>';
+  } else {
+    for (let i = 0; i < storedData.length; i++) {
+      const row = document.createElement('tr');
+
+      const productCell = document.createElement('td');
+      productCell.textContent = storedData[i]?.product || `Product ${i + 1}`;
+      row.appendChild(productCell);
+
+      const priceCell = document.createElement('td');
+      priceCell.textContent = storedData[i]?.price || 'N/A';
+      row.appendChild(priceCell);
+
+      const quantityCell = document.createElement('td');
+      quantityCell.textContent = storedData[i]?.quantity || 'N/A';
+      row.appendChild(quantityCell);
+
+      const qualityCell = document.createElement('td');
+      qualityCell.textContent = storedData[i]?.quality || '';
+      row.appendChild(qualityCell);
+
+      priceTableBody.appendChild(row);
+    }
+  }
+});
+let calcScrollValue = () =>{
+  let scrollProgress = document.getElementById("progress");
+  let progressValue = document.getElementById("progress-value");
+  let pos = document.documentElement.scrollTop;
+  let calcHeight = document.documentElement.
+  scrollHeight - document.documentElement.clientHeight;
+  let scrollvalue = Math.round((pos * 100)/ calcHeight);
+ /* console.log(scrollvalue);*/
+ if(pos>100){
+  scrollProgress.style.display = "grid";
+ }
+ else{
+  scrollProgress.style.display = "none";
+ }
+ scrollProgress.addEventListener("click",()=>{
+  document.documentElement.scrollTop = 0;
+ });
+ scrollProgress.style.background = 'conic-gradient(#03cc65 ${scrollValue}%, #d7d7d7 ${scrollValue}%)';
+};
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+  </script>
+    <br>
+    <p style="color: #2f2e2e; text-align: justify;padding-left: 25px; padding-right: 25px; font-size: larger; background-color: #ebebf2;">
+      At Mace Magic, we believe in the power of quality. Today's updated pricing reflects the best value for your premium spices. Remember, the prices you see can vary based on the quality of your product, and we pride ourselves on offering rates that often exceed market standards. If you have other spices beyond what’s listed, don’t hesitate to <a href="contact.html" style=" text-decoration-line: none; text-decoration-color: #49239b;">reach out!</a> We’re always eager to explore new possibilities and ensure you get the highest return for your harvest. Let us take your spices to the world at prices that truly reflect their worth</p>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+              <div class="map">Our Location</div>  
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7913.92252059086!2d80.57798309056099!3d7.3582394206029464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae34260d191190b%3A0x2426db57f4e9ed54!2sBothota!5e0!3m2!1sen!2slk!4v1724767634391!5m2!1sen!2slk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+             <div class="footer-column">
+              <div class="adress">Adress</div>
+              <i class="fa-solid fa-house"></i>
+                <p class="a-list">
+                  No.127,<br>
+                  Bothota,<br>
+                  Madewala.<br>
+                </p>
+             </div>
+             <div class="footer-column">
+               <div class="callus">Call Us</div>
+               <i class="fa-solid fa-phone"></i>
+                  <ul class="c-list">
+                     <li>+94987654321</li>
+                     <li>+94123456789</li>
+                  </ul>
+             </div>
+             <div class="foter-logo">
+                <p>Mace<br> Magic</p>
+             </div>
+      </div>
+    </footer>
+</body>
+</html>

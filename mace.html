@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mace Magic</title>
+    <link rel="stylesheet" href="mace.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="Logo">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="mace.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+    <script> 
+        let calcScrollValue = () =>{
+  let scrollProgress = document.getElementById("progress");
+  let progressValue = document.getElementById("progress-value");
+  let pos = document.documentElement.scrollTop;
+  let calcHeight = document.documentElement.
+  scrollHeight - document.documentElement.clientHeight;
+  let scrollvalue = Math.round((pos * 100)/ calcHeight);
+ /* console.log(scrollvalue);*/
+ if(pos>100){
+  scrollProgress.style.display = "grid";
+ }
+ else{
+  scrollProgress.style.display = "none";
+ }
+ scrollProgress.addEventListener("click",()=>{
+  document.documentElement.scrollTop = 0;
+ });
+ scrollProgress.style.background = 'conic-gradient(#03cc65 ${scrollValue}%, #d7d7d7 ${scrollValue}%)';
+};
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+    </script>
+    <section class="about-us">
+        <div class="about-images">
+            <img src="images/au.jpg" alt="Spices Image 1" class="spice-img">
+        </div>
+        <div class="about-text">
+            <h1>About Us</h1>
+            <p>Established in 2018, Mace Magic has grown into a trusted leader in the spice industry, committed to delivering the highest quality spices from farm to market. Our journey began with a simple mission: to connect the rich, authentic flavors of our carefully sourced spices with the world. We partner with over 40 dedicated farmers who share our passion for excellence, cultivating spices like cardamom, mace, cloves, dried ginger, nutmeg, turmeric, and black pepper using sustainable practices.
+                With a skilled team of 30 professionals, we ensure that every step of our process, from harvesting to distribution, meets the highest standards of quality and integrity. Our spices are sold to suppliers and companies who export them globally, allowing us to share the vibrant essence of our products with kitchens and consumers worldwide. At Mace Magic, we believe in the power of collaboration, innovation, and a deep respect for nature, making us a trusted name in the world of spices.
+              </p>
+        </div>
+    </section>
+    <section class="hero2">
+    <div class="mv-box">
+            <div class="vm">
+            <div class="mission">
+            <h1 style="color: rgb(214, 194, 233);">Mission</h1>
+            <p>To source and deliver the finest, sustainably-grown spices from our network of <br>farmers to global markets,ensuring the highest standards of quality, authenticity,<br> and integrity in every product.</p>
+        </div>
+        <div class="vision">
+            <h1 style="color: rgb(206, 182, 227);">Vision</h1>
+            <p>To be a leading provider of premium spices, known for our commitment to sustainability,<br> fair trade practices, and enhancing the flavors of kitchens worldwide.</p>
+        </div>
+        </div>
+    </div>
+    </section>
+    <section>
+        <div>
+            <div>
+                <h1 style="font-weight: 400; font-size: 50px; text-align: center;">Crop Calender</h1>
+                <table>
+                    <tr>
+                        <th style="color: red;font-size: larger;text-align: center;">Mace</th>
+                        <td><img src="images/c-Mace.webp" class="cc-image" ></td>
+                        <td style="color: white;background-color: red;text-align: center;">JAN</td>
+                        <td style="color: white;background-color: red;text-align: center;">FEB</td>
+                        <td style="color: white;background-color: red;text-align: center;">MAR</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="color: white;background-color: red;text-align: center;">JUL</td>
+                        <td style="color: white;background-color: red;text-align: center;">AUG</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="color: white;background-color: red;text-align: center;">DEC</td>
+                    </tr>
+                    <tr>
+                        <th style="color: rgb(194, 131, 131);font-size: larger;text-align: center;">Nutmeg</th>
+                        <td><img src="images/c-nutmeg.webp" class="cc-image"></td>
+                        <td style="color: white;background-color: rgb(194, 111, 111);text-align: center;">JAN</td>
+                        <td style="color: white;background-color: rgb(194, 111, 111);text-align: center;">FEB</td>
+                        <td style="color: white;background-color:rgb(194, 111, 111);text-align: center;">MAR</td>
+                        <tds></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="color: white;background-color: rgb(194, 111, 111);text-align: center;">JUL</td>
+                        <td style="color: white;background-color: rgb(194, 111, 111);text-align: center;">AUG</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="color: white;background-color: rgb(194, 111, 111);text-align: center;">DEC</td>
+                    </tr>
+                    <tr>
+                        <th style="color: green; font-size:larger;text-align: center;">Cardamom</th>
+                        <td><img src="images/c-cardamom.jpg" class="cc-image"></td>
+                        <td style="color: white;background-color:green;text-align: center;">JAN</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="color: white;background-color:green;text-align: center;">SEP</td>
+                        <td style="color: white;background-color:green;text-align: center;">OCT</td>
+                        <td style="color: white;background-color:green;text-align: center;">NOV</td>
+                        <td style="color: white;background-color:green;text-align: center;">DEC</td>
+                    </tr>
+                    <tr>
+                        <th style="color: brown;font-size: larger;text-align: center;">Cloves</th>
+                        <td><img src="images/c-cloves.jpg" class="cc-image"></td>
+                        <td style="color: white;background-color:brown;text-align: center;">JAN</td>
+                        <td style="color: white;background-color:brown;text-align: center;">FEB</td>
+                        <td style="color: white;background-color:brown;text-align: center;">MAR</td>
+                        <td style="color: white;background-color:brown;text-align: center;">APR</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="color: white;background-color:brown;text-align: center;">DEC</td>
+                    </tr>
+                    <tr>
+                        <th style="color: rgb(213, 213, 55);font-size: larger;text-align: center;">Dried Ginger</th>
+                        <td><img src="images/c-dryginger.jpg" class="cc-image"></td>
+                        <td></td>
+                        <td style="color: white;background-color: rgb(213, 213, 55);text-align: center;">FEB</td>
+                        <td style="color: white;background-color: rgb(213, 213, 55);text-align: center;">MAR</td>
+                        <td style="color: white;background-color: rgb(213, 213, 55);text-align: center;">APR</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th style="color: yellow;font-size: larger;text-align: center;">Turmeric</th>
+                        <td><img src="images/c-turmeric.webp" class="cc-image"></td>
+                        <td style="color: white;background-color:yellow;text-align: center;">JAN</td>
+                        <td style="color: white;background-color:yellow;text-align: center;">FEB</td>
+                        <td style="color: white;background-color:yellow;text-align: center;">MAR</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th style="color: gray;font-size: larger;text-align: center;" >Black Pepper</th>
+                        <td><img src="images/c-blackpepper.webp" class="cc-image"></td>
+                        <td></td>
+                        <td style="color: white;background-color:gray;text-align: center;">FEB</td>
+                        <td style="color: white;background-color:gray;text-align: center;">MAR</td>
+                        <td style="color: white;background-color:gray;text-align: center;">APR</td>
+                        <td style="color: white;background-color:gray;text-align: center;">MAY</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th style="color: black;font-size: larger;text-align: center;">Garcinia</th>
+                        <td><img src="images/c-garcinia.jpg" class="cc-image"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="color: white;background-color:black;text-align: center;">APR</td>
+                        <td style="color: white;background-color:black;text-align: center;">MAY</td>
+                        <td style="color: white;background-color:black;text-align: center;">JUN</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+              <div class="map">Our Location</div>  
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7913.92252059086!2d80.57798309056099!3d7.3582394206029464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae34260d191190b%3A0x2426db57f4e9ed54!2sBothota!5e0!3m2!1sen!2slk!4v1724767634391!5m2!1sen!2slk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+             <div class="footer-column">
+              <div class="adress">Adress</div>
+              <i class="fa-solid fa-house"></i>
+                <p class="a-list">
+                  No.127,<br>
+                  Bothota,<br>
+                  Madewala.<br>
+                </p>
+             </div>
+             <div class="footer-column">
+               <div class="callus">Call Us</div>
+               <i class="fa-solid fa-phone"></i>
+                  <ul class="c-list">
+                     <li>+94987654321</li>
+                     <li>+94123456789</li>
+                  </ul>
+             </div>
+             <div class="foter-logo">
+                <p>Mace<br> Magic</p>
+             </div>
+      </div>
+    </footer>
+</body>
+</html>
