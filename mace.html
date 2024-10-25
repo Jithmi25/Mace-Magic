@@ -21,10 +21,96 @@
             </ul>
         </nav>
     </header>
+    <div class="containermm">
+        <div class="arrow l" onclick="prev()">
+            <img src="images/l.png" alt="l"></div>
+        <div class="slide slide-2">
+            <div class="caption">
+                <h2>Welcome to Mace Magic</h2>
+            </div>
+        </div>
+       <div class="slide slide-3">
+        <div class="caption">
+            <h2>Welcome to Mace Magic</h2>
+        </div>
+       </div>
+       <div class="slide slide-4">
+        <div class="caption">
+            <h2>Welcome to Mace Magic</h2>
+        </div>
+       </div>
+       <div class="slide slide-5">
+        <div class="caption">
+            <h2>Welcome to Mace Magic</h2>
+        </div>
+       </div>
+       <div class="slide slide-6">
+        <div class="caption">
+            <h2>Welcome to Mace Magic</h2>
+        </div>
+       </div>
+       <div class="arrow r" onclick="next()">
+            <img src="images/r.png" alt="r">
+        </div>
+    </div>
     <div id="progress">
         <span id="progress-value">&#x1F815;</span>
     </div>
     <script> 
+     let slide = document.querySelectorAll('.slide');
+        var current = 0;
+
+        function cls(){
+            for(let i = 0; i < slide.length; i++){
+                  slide[i].style.display = 'none';
+            }
+        }
+
+        function next(){
+            cls();
+            if(current === slide.length-1) current = -1;
+            current++;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function(){
+                x+=0.1;
+                slide[current].style.opacity = x;
+                if(x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function prev(){
+            cls();
+            if(current === 0) current = slide.length;
+            current--;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function(){
+                x+=0.1;
+                slide[current].style.opacity = x;
+                if(x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function start(){
+            cls();
+            slide[current].style.display = 'block';
+        }
+        start();
         let calcScrollValue = () =>{
   let scrollProgress = document.getElementById("progress");
   let progressValue = document.getElementById("progress-value");
@@ -159,11 +245,11 @@ window.onload = calcScrollValue;
                         <td></td>
                     </tr>
                     <tr>
-                        <th style="color: yellow;font-size: larger;text-align: center;">Turmeric</th>
+                        <th style="color: rgb(252, 232, 5);font-size: larger;text-align: center;">Turmeric</th>
                         <td><img src="images/c-turmeric.webp" class="cc-image"></td>
-                        <td style="color: white;background-color:yellow;text-align: center;">JAN</td>
-                        <td style="color: white;background-color:yellow;text-align: center;">FEB</td>
-                        <td style="color: white;background-color:yellow;text-align: center;">MAR</td>
+                        <td style="color: white;background-color:rgb(252, 232, 5);text-align: center;">JAN</td>
+                        <td style="color: white;background-color:rgb(252, 232, 5);text-align: center;">FEB</td>
+                        <td style="color: white;background-color:rgb(252, 232, 5);text-align: center;">MAR</td>
                         <td></td>
                         <td></td>
                         <td></td>

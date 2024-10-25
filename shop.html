@@ -11,6 +11,8 @@
   background-color: #f4f4f4;
   padding: 0px;
   margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s;
 }
 .container {
   max-width: 800px;
@@ -18,11 +20,14 @@
   padding: 20px;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Rounded corners */
 }
 h1 {
   text-align: center;
   color: #6b4caf;
   margin-bottom: 20px;
+  font-size: 28px;
+  letter-spacing: 1px;
 }
 table {
   width: 100%;
@@ -34,16 +39,62 @@ th, td {
   text-align:justify;
   border-bottom: 1px solid #ddd;
   width: fit-content;
+  cursor: pointer; /* Add pointer cursor for interactivity */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 th {
   background-color: #6b4caf;
   color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 tbody tr:hover {
-  background-color: #f1f1f1;
+  background-color: #e6e6ff; /* Light hover effect */
 }
 tbody tr {
   transition: background-color 0.3s;
+}
+
+/* Change cell background and text color when clicked */
+td:active {
+  background-color: #6b4caf;
+  color: white;
+  transform: scale(1.05); /* Slight scaling effect on click */
+}
+
+td.clicked {
+  background-color: #6b4caf;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+td:hover {
+    transform: translateY(-10px); /* Slight upward movement on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for bright effect */
+    background-color: rgb(231, 157, 229); /* Brighter background on hover */
+  }
+   th:hover {
+    transform: translateY(-10px); /* Slight upward movement on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for bright effect */
+    background-color: rgb(123, 6, 121); /* Brighter background on hover */
 }
       </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -61,7 +112,13 @@ tbody tr {
                 <li><a href="shop.html">Shop</a></li>
             </ul>
         </nav>
-    </header><br><br>
+    </header>
+    <div class="shop-cover">
+      <div class="caption-s">
+      <h1>Today's <br>Prices</h1>
+    </div>
+  </div>
+    <br><br>
     <div id="progress">
       <span id="progress-value">&#x1F815;</span>
   </div>
@@ -81,8 +138,8 @@ tbody tr {
          
       </tbody>
     </table>
-  </div>
-  
+  </div>  
+  <br><br>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
   const priceTableBody = document.querySelector('#user-price-table tbody');
